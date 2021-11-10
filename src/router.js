@@ -7,31 +7,53 @@ const router = new Router({
   routes: [
     {
       path: '',
-      component: () => import('./layouts/DefaultLayout'),
+      component: () => import('./layouts/LayoutWithoutHeader'),
       children: [
         {
           path: '',
-          name: 'home',
-          component: () => import('./views/HomePage')
+          name: 'landing',
+          component: () => import('./views/LandingPage')
         },
+      ],
+    },
+    {
+      path: '/views',
+      component: () => import('./layouts/DefaultLayout'),
+      children: [
         {
-          path: '/learn',
+          path: 'learn',
           name: 'learn',
           component: () => import('./views/Learn')
         },
         {
-          path: '/design',
-          name: 'design',
+          path: 'contact',
+          name: 'contact',
+          component: () => import('./views/Contact')
+        },
+        {
+          path: 'design',
+          nae: 'design',
           component: () => import('./views/Design')
         },
         {
-          path: '/service',
+          path: 'service',
           name: 'service',
           component: () => import('./views/Service')
         },
+        {
+          path: 'extras',
+          name: 'extras',
+          component: () => import('./views/Extras')
+        },
+        {
+          path: 'contact/laborContact',
+          name: 'labor-contact',
+          component: () => import('./views/LaborContact')
+        },
       ]
-    }
+    },
   ]
 });
 
 export default router;
+
