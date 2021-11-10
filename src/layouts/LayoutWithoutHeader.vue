@@ -1,33 +1,5 @@
 <template>
   <simple-layout class="default-layout">
-    <template class="header" #header style="background: #12128b">
-      <column mode="full" class="layout-header">
-        <block>
-          <div class="default-layout__wrapper">
-            <img class="default-layout__menu-icon" src="@/assets/icons/icon-menu.svg" alt="Menu Icon" @click="toggleMenu">
-            <nav>
-              <img class="default-layout__logo-icon" @click="$router.push({name: 'landing'})" style="width: 46px; display: inline-table; vertical-align: middle;" src="@/assets/icons/logo.svg" >
-              <span class="default-layout__logo" @click="$router.push({name: 'landing'})"><strong>Mcken</strong>naCorp</span>
-              <ul class="default-layout__links default-layout__links-header">
-                <li class="default-layout__link"><router-link :to="{name: 'landing'}">Inicio</router-link></li>
-                <li class="default-layout__link"><router-link :to="{name: 'contact'}">Contacto</router-link></li>
-                <li class="default-layout__link"><router-link :to="{name: 'learn'}">Sobre nosotros</router-link></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="default-layout__menu" v-show="isOpen">
-            <nav class="default-layout__nav">
-              <ul class="default-layout__links default-layout__links--menu">
-                <li class="default-layout__buttom-link"><router-link :to="{name: 'landing'}">Inicio</router-link></li>
-                <li class="default-layout__buttom-link"><router-link :to="{name: 'contact'}">Contacto</router-link></li>
-                <li class="default-layout__buttom-link"><router-link :to="{name: 'learn'}">Sobre nosotros</router-link></li>
-              </ul>
-            </nav>
-          </div>
-        </block>
-      </column>
-    </template>
-
     <main>
       <router-view />
     </main>
@@ -47,7 +19,7 @@
   </simple-layout>
 </template>
 
-<script>
+<sript>
 export default {
   data() {
     return {
@@ -216,3 +188,4 @@ export default {
   }
 }
 </style>
+
