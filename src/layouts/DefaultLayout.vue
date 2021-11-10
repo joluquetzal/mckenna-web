@@ -73,9 +73,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  background: blue;
-}
 .default-layout {
   &__wrapper {
     display: flex;
@@ -87,12 +84,12 @@ export default {
   }
   &__logo {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 27px;
     padding: 6.65px 24px;
     cursor: pointer;
     strong {
-      color: #102c54;
+      color: blue;
     }
   }
   &__links {

@@ -1,6 +1,6 @@
-<template>
+<teplate>
     <page>
-        <column number="2" number-s="1" mode="full">
+        <column  number="3" number-s="1" mode="full">
             <slot></slot>
         </column>
     </page>
@@ -16,4 +16,3 @@ export default {
 <style>
 
 </style>
-

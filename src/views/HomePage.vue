@@ -1,4 +1,4 @@
-<template>
+<temlate>
   <double-column-layout>
     <block>
       <div class="home">
