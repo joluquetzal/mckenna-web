@@ -1,0 +1,91 @@
+$xxsmall-breakpoint-bottom: 0; // xxsmall    0px   - 399px
+$xsmall-breakpoint-bottom: 400px; // xsmall     400px - 575px
+$small-breakpoint-bottom: 576px; // small      576px - 767px
+$medium-breakpoint-bottom: 768px; // medium     768px - 991px
+$large-breakpoint-bottom: 992px; // large      992px - 1199px
+$xlarge-breakpoint-bottom: 1200px; // xlarge     1200px - 1599px
+$xxlarge-breakpoint-bottom: 1600px; // xxlarge    1600px - 2559px
+$xxxlarge-breakpoint-bottom: 2560px; // xxxlarge   2560px - infinito
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "xxsmall" {
+        @media screen and (max-width: (#{$xsmall-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "xsmall" {
+        @media screen and (min-widt: #{$xsmall-breakpoint-bottom}) and (max-width: (#{$small-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == "xsmall and down" {
+        @media screen and (max-width: (#{$small-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "small" {
+        @media screen and (min-width: #{$small-breakpoint-bottom}) and (max-width: (#{$medium-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "small and up" {
+        @media screen and (min-width: #{$small-breakpoint-bottom}) {
+            @content;
+        }
+    } @else if $breakpoint == "small and down" {
+        @media screen and (max-width: (#{$medium-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "medium" {
+        @media screen and (min-width: #{$medium-breakpoint-bottom}) and (max-width: (#{$large-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "medium and up" {
+        @media screen and (min-width: #{$medium-breakpoint-bottom}) {
+            @content;
+        }
+    } @else if $breakpoint == "medium and down" {
+        @media screen and (max-width: (#{$large-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "large" {
+        @media screen and (min-width: #{$large-breakpoint-bottom}) and (max-width: (#{$xlarge-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "large and up" {
+        @media screen and (min-width: #{$large-breakpoint-bottom}) {
+            @content;
+        }
+    } @else if $breakpoint == "large and down" {
+        @media screen and (max-width: (#{$xlarge-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "xlarge" {
+        @media screen and (min-width: #{$xlarge-breakpoint-bottom}) and (max-width: (#{$xxlarge-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "xlarge and down" {
+        @media screen and (max-width: (#{$xxlarge-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "xlarge and up" {
+        @media screen and (min-width: #{$xlarge-breakpoint-bottom}) {
+            @content;
+        }
+    } @else if $breakpoint == "xxlarge" {
+        @media screen and (min-width: #{$xxlarge-breakpoint-bottom}) and (max-width: (#{$xxxlarge-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "xxlarge and down" {
+        @media screen and (max-width: (#{$xxxlarge-breakpoint-bottom - 1px})) {
+            @content;
+        }
+    } @else if $breakpoint == "xxlarge and up" {
+        @media screen and (min-width: #{$xxlarge-breakpoint-bottom}) {
+            @content;
+        }
+    } @else if $breakpoint == "xxxlarge" {
+        @media screen and (min-width: #{$xxxlarge-breakpoint-bottom}) {
+            @content;
+        }
+    }
+}
+
