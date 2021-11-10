@@ -1,4 +1,4 @@
-<template>
+<temlate>
   <triple-column-layout>
     <block>
       <div class="home">
@@ -19,7 +19,7 @@
     <block>
       <div class="description">
         <div class="content">
-          <h1>Diseño de ductos</h1>
+          <h1>Dise√±o de ductos</h1>
       
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque

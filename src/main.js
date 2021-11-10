@@ -15,4 +15,5 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-Vue.components('DefaultLayout', DefaultLayout);
+Vue.component('DefaultLayout', DefaultLayout);
+

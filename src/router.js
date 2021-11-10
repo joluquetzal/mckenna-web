@@ -19,10 +19,19 @@ const router = new Router({
           name: 'learn',
           component: () => import('./views/Learn')
         },
+        {
+          path: '/design',
+          name: 'design',
+          component: () => import('./views/Design')
+        },
+        {
+          path: '/service',
+          name: 'service',
+          component: () => import('./views/Service')
+        },
       ]
     }
   ]
 });
 
 export default router;
-
