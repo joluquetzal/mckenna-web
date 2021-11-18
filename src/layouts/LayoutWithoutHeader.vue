@@ -19,7 +19,7 @@
   </simple-layout>
 </template>
 
-<sript>
+<script>
 export default {
   data() {
     return {

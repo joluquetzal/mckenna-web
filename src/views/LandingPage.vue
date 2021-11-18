@@ -1,6 +1,6 @@
 <template>
     <div>
-        <video class="logo" autoplay muted @click="toggleMenu">
+        <video class="logo" autoplay muted>
               <source src="@/assets/wallpaper.mp4" type="video/mp4">
         </video>
         <block>

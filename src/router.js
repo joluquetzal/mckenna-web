@@ -32,7 +32,7 @@ const router = new Router({
         },
         {
           path: 'design',
-          nae: 'design',
+          name: 'design',
           component: () => import('./views/Design')
         },
         {
@@ -49,6 +49,11 @@ const router = new Router({
           path: 'contact/laborContact',
           name: 'labor-contact',
           component: () => import('./views/LaborContact')
+        },
+        {
+          path: 'contact/clientsContact',
+          name: 'clients-contact',
+          component: () => import('./views/ClientsContact')
         },
       ]
     },

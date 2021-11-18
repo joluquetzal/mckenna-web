@@ -1,16 +1,35 @@
-<temlate>
+<template>
   <double-column-layout>
     <block>
       <div class="home">
-        <h1>Mantenimiento</h1>
+        <h1>LIMPIEZA A EQUIPOS DE EXTRACCIÓN DE COCINAS
+                        (DUCTOS, CAMPANAS, TURBINAS)</h1>
     
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          ullamcorper urna vitae posuere feugiat. Sed at purus eget metus ultrices 
-          interdum. In hac habitasse platea dictumst. Donec quis facilisis enim. 
-          Vestibulum faucibus sagittis massa, sed auctor nibh varius at. Etiam lorem odio, 
-          lobortis vel semper et, varius vel diam. 
-          Proin sed tortor sapien. Phasellus mollis hendrerit augue quis tincidunt. 
+          El servicio de limpieza consiste en la evacuación de grasa del interior del equipo 
+          para ello se utiliza equipo especializado o bien de manera manual según las necesidades de cada instalación. 
+          La cotización de este servicio se realiza mediante una visita técnica en las instalaciones.
+          Este servicio se encuentra dirigido a restaurantes, cocinas industriales, hospitales, laboratorios,
+          supermercados, etc. 
+        </p>
+        <h2>PROPÓSITO DE LA LIMPIEZA</h2>
+        <p>
+          PREVENCIÓN DE INCENDIOS
+        </p>
+        <p>
+          ALARGAR LA VIDA ÚTIL DEL EQUIPO
+        </p>
+        <p>
+          PREVENIR O AMINORAR LAS PLAGAS
+        </p>
+        <p>
+          EVITAR CONTAMINACIÓN EN LOS ALIMENTOS
+        </p>
+        <p>
+          CONTAR CON MEJOR CALIDAD DE AIRE Y OLORES EN LAS INSTALACIONES 
+        </p>
+        <p>
+          ACCEDER A CERTIFICACIONES ESPECIALES
         </p>
       </div>
     </block>
@@ -33,7 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  padding-top: 100px;
+  padding-top: 20px;
 }
 .img {
     .imag {

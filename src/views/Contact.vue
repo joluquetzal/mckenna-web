@@ -1,14 +1,10 @@
 <template>
-    <div>
-        <full-layout>
-            <block>
-                <h1 class="title">QUE BUSCAS</h1>
-            </block>
-        </full-layout>
+    <div class="page">
         <double-column-layout>
             <block>
-            <div class="home">
+            <div class="card-labor">
                 <div class="content">
+                <img src="@/assets/icons/folder.png" alt="">
                 <h3>Trabaja con nosotros</h3>
             
                 <p>
@@ -18,13 +14,14 @@
                     otorgar para dar solucion y mantener el area a salvo de incendios.
                 </p>
                 
-                <button @click="$router.push({name: labor-contact'})">Conocer mas</button>
-                </div>
+                <button @click="$router.push({name: 'labor-contact'})">Conocer mas</button>
+               </div>
             </div>
             </block>
             <block>
-            <div class="description">
+            <div class="card-client">
                 <div class="content">
+                <img src="@/assets/icons/handshake.png" alt="">
                 <h3>Contrata nuestros servicios</h3>
             
                 <p>
@@ -36,7 +33,7 @@
                     Proin sed tortor sapien. Phasellus mollis hendrerit augue quis tincidunt. 
                 </p>
                 
-                <button @click="$router.push({name: 'design'})">Conocer mas</button>
+                <button @click="$router.push({name: 'clients-contact'})">Conocer mas</button>
                 </div>
             </div>
             </block>
@@ -47,46 +44,61 @@
 <script>
 import Block from '@lkmx/flare/src/core/Block.vue';
 import DoubleColumnLayout from '../layouts/DoubleColumnLayout.vue';
-import FullLayout from '../layouts/FullLayout.vue';
 
 export default {
     name: 'Work',
-    components: { DoubleColumnLayout, FullLayout, Block},
+    components: { DoubleColumnLayout, Block},
 }
 </script>
 
 <style lang="scss"
         TripleColumnLayout scoped>
-.title {
-    text-align: center;
-}
-.home {
-  height: 550px;
-  text-align: center;
-  background: aliceblue;
-  .content {
-    padding-top: 30%;
-  }
-}
-.description {
-  height: 550px;
-  text-align: center;
-  background: honeydew;
-  .content {
-    padding-top: 30%;
-  }
-}
-.des {
-  height: 550px;
-  text-align: center;
-  background: whitesmoke;
-  .content {
-    padding-top: 30%;
-  }
-}
-@include respond-to("medium and down") {
-  .home {
-    padding-top: unset;
-  }
+        .page {
+            background-color: #DEE4E7;
+            .card-labor {
+                height: 600px;
+                text-align: center;
+                background-image: url(../assets/wroking-card.png);
+              .content {
+                    padding: 25% 10%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    text-decoration: white;
+                    img {
+                        width: 70px;
+                        margin: auto;
+                        padding-bottom: 10px;
+                    }
+                    h3 {
+                        color: white;
+                    }
+                    p {
+                        color: white;
+                    }
+              }
+            }
+            .card-client {
+                height: 600px;
+                text-align: center;
+                background-image: url(../assets/clients-card.png);
+              .content {
+                    padding: 25% 10%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    -webkit-text-decoration: white;
+                    text-decoration: white;
+                    img {
+                        width: 70px;
+                        margin: auto;
+                        padding-bottom: 10px;
+                    }
+                    h3 {
+                        color: white;
+                    }
+                    p {
+                        color: white;
+                    }
+              }
+        }
 }
 </style>

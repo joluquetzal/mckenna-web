@@ -1,52 +1,43 @@
-<temlate>
+<template>
   <triple-column-layout>
     <block>
       <div class="home">
         <div class="content">
-          <h1>Mantenimiento</h1>
+          <h1>Limpieza de equipos de extracción</h1>
     
           <p>
-            Creamos propuestas de control ambiental y de cuidado de
-            los ductos que se encuentren en los restaurantes, 
-            con una gran variedad de opciones y planes que se les pueden
-            otorgar para dar solucion y mantener el area a salvo de incendios.
+            Realizamos limpieza de equipos de extracción de grasa, vapores, residuos 
+            de laboratorio, ceniza, etc
           </p>
           
-          <button>Conocer mas</button>
+          <button @click="$router.push({name: 'service'})">Conocer mas</button>
         </div>
       </div>
     </block>
     <block>
       <div class="description">
         <div class="content">
-          <h1>Dise√±o de ductos</h1>
+          <h1>Diseño de instalación</h1>
       
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-            ullamcorper urna vitae posuere feugiat. Sed at purus eget metus ultrices 
-            interdum. In hac habitasse platea dictumst. Donec quis facilisis enim. 
-            Vestibulum faucibus sagittis massa, sed auctor nibh varius at. Etiam lorem odio, 
-            lobortis vel semper et, varius vel diam. 
-            Proin sed tortor sapien. Phasellus mollis hendrerit augue quis tincidunt. 
+            Diseñamos Equipos De Extracción para cualquier espacio: restaurantes,
+            laboratorios, cocinas industriales, hospitales, supermercados y más. 
           </p>
           
-          <button>Conocer mas</button>
+          <button @click="$router.push({name: 'design'})">Conocer mas</button>
         </div>
       </div>
     </block>
     <block>
       <div class="des">
         <div class="content">
-          <h1>Servicios extra</h1>
-      
+          <h1>Servicios adicionales</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-            ullamcorper urna vitae posuere feugiat. Sed at purus eget metus ultrices 
-            interdum. In hac habitasse platea dictumst. Donec quis facilisis enim. 
-            Vestibulum faucibus sagittis massa, sed auctor nibh varius at.
+            Contamos con servicios integrales para la comodidad y 
+            funcionalidad de sus instalaciones.
           </p>
           
-          <button>Conocer mas</button>
+          <button @click="$router.push({name: 'extras'})">Conocer mas</button>
         </div>
       </div>
     </block>
