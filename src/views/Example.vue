@@ -18,7 +18,7 @@
 import BaseLayout from "../components/BaseLayout.vue";
 
 export default {
-  name: "Landing-Page",
+  name: "Example-Page",
   components: { BaseLayout },
 };
 </script>
