@@ -1,19 +1,13 @@
 <template>
-    <page>
-        <column number= "1" mode="full">
-            <slot></slot>
-        </column>
-    </page>
+  <page>
+    <column number="1" mode="full">
+      <slot></slot>
+    </column>
+  </page>
 </template>
 
 <script>
-export default {
-    
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
-
+<style></style>

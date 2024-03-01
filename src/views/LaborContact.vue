@@ -1,31 +1,28 @@
 <template>
-    <div>
-        <img src="@/assets/working-logo.svg" alt="">
-        <block>
-            <labor-description/>
-            <jobs-list/>
-        </block>
-    </div>
+  <div>
+    <img src="" alt="" />
+    <block>
+      <labor-description />
+      <jobs-list />
+    </block>
+  </div>
 </template>
 
 <script>
-import LaborDescription from '../components/LaborDescription.vue';
-import Block from '@lkmx/flare/src/core/Block.vue';
-import JobsList from '../components/JobsList.vue';
+import JobsList from "../components/JobsList.vue";
+import LaborDescription from "../components/LaborDescription.vue";
 
 export default {
-    name: 'LaborContact',
-    components: { LaborDescription, Block, JobsList},
-}
+  name: "LaborContact",
+  components: { LaborDescription, JobsList },
+};
 </script>
 
-<style lang="scss"
-        TripleColumnLayout scoped>
+<style lang="scss" TripleColumnLayout scoped>
 img {
-    width: 100%;
+  width: 100%;
 }
 
 @include respond-to("medium and down") {
-  
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <column mode="slim">
         <block>
-          <slot/>
+          <slot></slot>
         </block>
     </column>
 </template>

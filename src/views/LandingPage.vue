@@ -1,33 +1,30 @@
 <template>
-    <div>
-        <video class="logo" autoplay muted @click="toggleMenu">
-              <source src="@/assets/wallpaper.mp4" type="video/mp4">
-        </video>
-        <block>
-            <work/>
-            <clients/>
-        </block>
-    </div>
+  <Page>
+    <video class="logo" autoplay muted @click="toggleMenu">
+      <source src="" type="video/mp4" />
+    </video>
+    <Block>
+      <work />
+      <clients />
+    </Block>
+  </Page>
 </template>
 
 <script>
-import Work from '../components/Work.vue';
-import Block from '@lkmx/flare/src/core/Block.vue';
-import Clients from '../components/Clients.vue';
+import Clients from "../components/Clients.vue";
+import Work from "../components/Work.vue";
 
 export default {
-    name: 'landing',
-    components: { Work, Block, Clients},
-}
+  name: "Test-Page",
+  components: { Work, Clients },
+};
 </script>
 
-<style lang="scss"
-        TripleColumnLayout scoped>
+<style lang="scss" TripleColumnLayout scoped>
 video {
-    width: 100%;
+  width: 100%;
 }
 
 @include respond-to("medium and down") {
-  
 }
 </style>
