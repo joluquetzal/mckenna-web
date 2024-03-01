@@ -15,7 +15,7 @@ import Clients from "../components/Clients.vue";
 import Work from "../components/Work.vue";
 
 export default {
-  name: "Test-Page",
+  name: "Landig-Page",
   components: { Work, Clients },
 };
 </script>
