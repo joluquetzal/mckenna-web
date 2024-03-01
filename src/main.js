@@ -1,19 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import FlareVue from "@lkmx/flare-vue";
+import "@lkmx/flare/src/flare.scss";
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router/index";
 
-import DefaultLayout from './layouts/DefaultLayout';
-
-import Flare from '@lkmx/flare';
-
-Vue.config.productionTip = false
-
-Vue.use(Flare);
-
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
-
-Vue.component('DefaultLayout', DefaultLayout);
-
+const app = createApp(App);
+app.use(router);
+app.use(FlareVue);
+router.isReady().then(() => app.mount("#app"));
