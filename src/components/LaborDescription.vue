@@ -1,7 +1,7 @@
 <template>
   <div>
     <column mode="full">
-      <block class="description">
+      <block>
         <h1>Creciendo juntos</h1>
         <p>
           En mackenna buscamos que se desarrollen Lorem ipsum dolor, sit amet
@@ -64,10 +64,6 @@ export default {
 </script>
 
 <style lang="scss" TripleColumnLayout scoped>
-.description {
-  padding: 20px;
-}
-
 .types {
   padding: 60px 20px 60px 20px;
   img {
