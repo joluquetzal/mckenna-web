@@ -1,10 +1,10 @@
 <template>
   <div>
-    <full-layout>
+    <normal-layout>
       <block>
         <h1 class="title">QUE BUSCAS</h1>
       </block>
-    </full-layout>
+    </normal-layout>
     <double-column-layout>
       <block>
         <div class="home">
@@ -51,11 +51,11 @@
 
 <script>
 import DoubleColumnLayout from "../layouts/DoubleColumnLayout.vue";
-import FullLayout from "../layouts/FullLayout.vue";
+import NormalLayout from "../layouts/NormalLayout.vue";
 
 export default {
   name: "Contact-Page",
-  components: { DoubleColumnLayout, FullLayout },
+  components: { DoubleColumnLayout, NormalLayout },
 };
 </script>
 

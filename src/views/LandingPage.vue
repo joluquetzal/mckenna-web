@@ -1,30 +1,29 @@
 <template>
   <Page>
-    <video class="logo" autoplay muted @click="toggleMenu">
-      <source src="" type="video/mp4" />
-    </video>
     <Block>
-      <work />
-      <clients />
+      <introduction class="intro" />
+      <mainServices />
+      <packages-banner />
     </Block>
   </Page>
 </template>
 
 <script>
-import Clients from "../components/Clients.vue";
-import Work from "../components/Work.vue";
+import Introduction from "../components/Introduction.vue";
+import MainServices from "../components/MainServices.vue";
+import PackagesBanner from "../components/PackagesBanner.vue";
 
 export default {
   name: "Landig-Page",
-  components: { Work, Clients },
+  components: { MainServices, Introduction, PackagesBanner },
 };
 </script>
 
-<style lang="scss" TripleColumnLayout scoped>
-video {
-  width: 100%;
+<style lang="scss">
+.intro {
+  padding: 70px;
+  height: auto !important;
 }
-
 @include respond-to("medium and down") {
 }
 </style>

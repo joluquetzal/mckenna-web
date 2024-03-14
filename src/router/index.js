@@ -44,6 +44,26 @@ const router = createRouter({
           component: () => import("../views/Extras.vue"),
         },
         {
+          path: "facials",
+          name: "facials-page",
+          component: () => import("../views/Facials.vue"),
+        },
+        {
+          path: "massages",
+          name: "massages-page",
+          component: () => import("../views/Massages.vue"),
+        },
+        {
+          path: "packages",
+          name: "packages-page",
+          component: () => import("../views/Packages.vue"),
+        },
+        {
+          path: "packages",
+          name: "packages-page",
+          component: () => import("../views/Packages.vue"),
+        },
+        {
           path: "contact/laborContact",
           name: "labor-contact",
           component: () => import("../views/LaborContact.vue"),
