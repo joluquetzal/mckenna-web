@@ -1,6 +1,6 @@
 <template>
   <page>
-    <column number="2" number-s="1" mode="full">
+    <column number="2" number-s="1" mode="normal">
       <slot></slot>
     </column>
   </page>

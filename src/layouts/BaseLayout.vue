@@ -1,6 +1,9 @@
 <template>
   <div class="base-layout">
-    <simple-header></simple-header>
+    <div class="main-logo">
+      <img src="../assets/flowers.svg" alt="" />
+      <simple-header></simple-header>
+    </div>
     <main>
       <router-view />
     </main>
@@ -18,6 +21,16 @@ export default {
 </script>
 
 <style scoped>
+.main-logo {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+img {
+  display: block;
+  width: 100%;
+}
 .base-layout {
   min-height: 100vh;
   display: grid;

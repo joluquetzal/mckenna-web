@@ -228,7 +228,7 @@
     sass-loader "^12.6.0"
     vue "^3.2.33"
 
-"@lkmx/flare@^0.5.12", "@lkmx/flare@^0.5.20":
+"@lkmx/flare@^0.5.20", "@lkmx/flare@^0.5.22":
   version "0.5.22"
   resolved "https://registry.yarnpkg.com/@lkmx/flare/-/flare-0.5.22.tgz#f0a093c6991d85b27984d0abe755f5beddae5534"
   integrity sha512-O6tAcQ+8LLzLTLwEQ/DCFrNgLWYwcpE+h/0WVVC6LCwbAH6XmYUMWNVnNszGOHKkDF72tv9jIee2kjMAf1Pfkw==

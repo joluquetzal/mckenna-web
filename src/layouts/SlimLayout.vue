@@ -1,17 +1,13 @@
 <template>
-    <column mode="slim">
-        <block>
-          <slot></slot>
-        </block>
-    </column>
+  <column mode="slim">
+    <block>
+      <slot></slot>
+    </block>
+  </column>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>

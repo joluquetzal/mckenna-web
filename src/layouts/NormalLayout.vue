@@ -1,9 +1,9 @@
 <template>
-  <page>
-    <column number="1" mode="full">
+  <column mode="normal">
+    <block>
       <slot></slot>
-    </column>
-  </page>
+    </block>
+  </column>
 </template>
 
 <script>

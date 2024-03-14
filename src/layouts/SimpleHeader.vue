@@ -1,29 +1,17 @@
 <template>
-  <header style="background: #12128b">
+  <header style="background: black">
     <Columns mode="full" class="layout-header">
       <Block>
         <div class="default-layout__wrapper">
-          <img
-            class="default-layout__menu-icon"
-            src=""
-            alt="Menu Icon"
-            @click="toggleMenu"
-          />
           <nav>
-            <img
-              class="default-layout__logo-icon"
-              @click="$router.push({ name: 'landing' })"
-              style="width: 46px; display: inline-table; vertical-align: middle"
-              src=""
-            />
             <span
               class="default-layout__logo"
               @click="$router.push({ name: 'landing' })"
-              ><strong>Mcken</strong>naCorp</span
+              ><strong>HANNAH</strong> (spa)</span
             >
             <ul class="default-layout__links default-layout__links-header">
               <li class="default-layout__link">
-                <router-link :to="{ name: 'landing' }">Inicio</router-link>
+                <router-link :to="{ name: 'landing' }">Servicios</router-link>
               </li>
               <li class="default-layout__link">
                 <router-link :to="{ name: 'contact' }">Contacto</router-link>
