@@ -1,5 +1,5 @@
 <template>
-  <column mode="normal">
+  <column mode="full">
     <block>
       <slot></slot>
     </block>

@@ -4,8 +4,4 @@
   </div>
 </template>
 
-<style>
-#app {
-  background-color: #fcfcfc;
-}
-</style>
+<style></style>

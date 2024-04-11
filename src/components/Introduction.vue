@@ -1,85 +1,116 @@
-/*buscar nuevas fontFamilyis cambiar color de fondo (no queda con la portada)
-agregar animaciones agregar una sombra al primer cuadro*/
 <template>
-  <SideBar>
-    <block class="image-block">
-      <div class="image-intro">
-        <img src="../assets/intro.svg" alt="" />
+  <page class="intro">
+    <DoubleColumnLayout>
+      <block>
+        <div class="image-intro">
+          <img src="../assets/intro.svg" alt="" />
+        </div>
+      </block>
+      <block class="container">
+        <div class="description-intro">
+          <h1>Un santuario</h1>
+        </div>
+        <div class="description-intro">
+          <h1>hecho a la</h1>
+        </div>
+
+        <div class="description-intro">
+          <h1>medida para el</h1>
+        </div>
+        <div class="description-intro">
+          <h1>bienestar de tu</h1>
+        </div>
+
+        <div class="description-intro">
+          <h1>cuerpo y de tu</h1>
+        </div>
+
+        <div class="description-intro">
+          <h1>salud</h1>
+        </div>
+      </block>
+    </DoubleColumnLayout>
+    <SingleColumnLayout class="intro-title">
+      <div>
+        <h1>Tu cuerpo</h1>
+        <p>es</p>
+        <h1>para nosotos</h1>
+        <p>lo mas</p>
+        <h1>importante</h1>
       </div>
-    </block>
-    <block class="description-block">
-      <div class="description-intro">
-        <h1>Hora de relajarse</h1>
-        <p>
-          A sanctuary of relaxed luxury, the 5-star Relais & Châteaux hotel in
-          the heart of the Serra de Tramuntana. Quintessence of what is
-          authentically Mallorcan. Surrounded by 32 hectares of vineyards,
-          orchards and centuries-old olive trees, just 2 km from the town of
-          Pollença and 6 km from the sea. This historic 18th century monastery
-          is the perfect place to enjoy Majorca.
-        </p>
-        <p>
-          A sanctuary of relaxed luxury, the 5-star Relais & Châteaux hotel in
-          the heart of the Serra de Tramuntana. Quintessence of what is
-          authentically Mallorcan. Surrounded by 32 hectares of vineyards,
-          orchards and centuries-old olive trees, just 2 km from the town of
-          Pollença and 6 km from the sea. This historic 18th century monastery
-          is the perfect place to enjoy Majorca.
-        </p>
-      </div>
-    </block>
-    <block>
-      <img class="planta" src="../assets/icons/planta.svg" alt="" />
-    </block>
-  </SideBar>
+    </SingleColumnLayout>
+    <div class="star">
+      <img src="../assets/icons/simple-star.svg" alt="" />
+    </div>
+  </page>
 </template>
 
 <script>
-import SideBar from "../layouts/SideBar.vue";
-
+import DoubleColumnLayout from "../layouts/DoubleColumnLayout.vue";
 export default {
   name: "Introduction-Section",
-  components: { SideBar },
+  components: { DoubleColumnLayout },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap");
-
-.image-block {
-  width: 80%;
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("../assets/fonts/Boska_Complete/Fonts/WEB/css/boska.css");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
+.intro {
+  justify-content: space-between;
+  align-items: stretch;
+  height: 300vh;
+  padding-top: 20px;
   .image-intro {
-    width: 500px;
+    padding: 12%;
+    img {
+      width: 90%;
+      border-radius: 5%;
+    }
   }
-}
-
-.description-block {
-  background-color: floralwhite;
-  .description-intro {
-    z-index: 1;
-    position: relative;
+  .container {
+    display: flex;
+    align-items: center;
+    .description-intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      h1 {
+        font-size: 5vw;
+        line-height: 6vw;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: inherit;
+      }
+    }
+  }
+  .intro-title {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 15vw;
     h1 {
-      font-family: "Cormorant", serif;
-      font-optical-sizing: auto;
-      font-weight: 200;
-      font-size: 100px;
-      font-style: italic;
+      font-family: "Boska-Black";
+      color: inherit;
+      text-align: center;
+      font-size: 13vw;
+      line-height: 0.7;
     }
     p {
-      margin-right: 20%;
-      font-size: 15px;
-      color: black;
+      color: inherit;
+      font-family: "Corinthia", cursive;
+      text-align: center;
+      font-size: 4vw;
+      line-height: 1;
     }
   }
-}
-
-.planta {
-  transform: translateY(21.682px);
-  position: absolute;
-  height: 100%;
-  right: 0px;
-  top: 1012px;
-  z-index: 0;
-  width: 50%;
+  .star {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vw;
+  }
 }
 </style>

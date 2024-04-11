@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer">
     <Columns number="2" number-m="2" number-s="1">
       <Block>
         <nav class="default-layout__nav">
@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.footer {
+  background-color: #000000;
+  height: 20vw;
+}
 .default-layout {
   .layout-header {
     background: #12128b;
@@ -88,9 +92,9 @@ export default {
     margin-bottom: 0;
     a {
       text-decoration: none;
-      color: black;
+      color: white;
       &:visited {
-        color: black;
+        color: white;
       }
     }
   }

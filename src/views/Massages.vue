@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <block>
-      <main-massages />
-    </block>
-  </div>
+  <Page>
+    <main-massages />
+  </Page>
 </template>
 
 <script>
@@ -14,7 +12,7 @@ export default {
   components: { MainMassages },
 };
 </script>
-<style lang="scss" TripleColumnLayout scoped>
+<style lang="scss">
 @include respond-to("medium and down") {
 }
 </style>

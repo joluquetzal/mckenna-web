@@ -1,68 +1,54 @@
 <template>
-  <Page>
-    <DoubleColumnLayout>
-      <block>
-        <img class="image-facials-title" src="../assets/massage.svg" alt="" />
-      </block>
-      <block>
-        <div class="description-facials-title">
-          <h1>Nuestros Masajes</h1>
-          <p>
-            A sanctuary of relaxed luxury, the 5-star Relais & Châteaux hotel in
-            the heart of the Serra de Tramuntana. Quintessence of what is
-            authentically Mallorcan. Surrounded by 32 hectares of vineyards,
-            orchards and centuries-old olive trees, just 2 km from the town of
-            Pollença and 6 km from the sea. This historic 18th century monastery
-            is the perfect place to enjoy Majorca.
-          </p>
-        </div>
-      </block>
-    </DoubleColumnLayout>
-    <div v-for="(product, index) in products" :key="index">
-      <column
-        number="2"
-        number-s="1"
-        mode="normal"
-        class="product"
-        :class="(index + 1) % 2 === 1 ? 'odd' : 'even'"
-      >
-        <block id="details">
-          <div class="details-text">
-            <h2>{{ product.title }}</h2>
-            <p>{{ product.description }}</p>
-            <p>{{ product.duration }}</p>
-            <p>{{ product.cost }}</p>
-          </div>
-        </block>
-        <block>
-          <div id="image">
-            <img :src="`${product.img}`" :alt="index" />
-          </div>
-        </block>
-      </column>
+  <Page class="massages">
+    <div class="products">
+      <div v-for="(product, index) in products" :key="index">
+        <column
+          number="2"
+          mode="full"
+          class="product"
+          :class="(index + 1) % 2 === 1 ? 'odd' : 'even'"
+        >
+          <block id="details">
+            <div class="details-text">
+              <h2 class="title">{{ product.title }}</h2>
+              <p class="description">{{ product.description }}</p>
+              <p class="details">{{ product.duration }}</p>
+            </div>
+          </block>
+          <block>
+            <div class="image-wrapper" id="image">
+              <img
+                class="imagen default"
+                :src="`${product.img}`"
+                :alt="index"
+              />
+              <img class="imagen demo" :src="`${product.gif}`" :alt="index" />
+            </div>
+          </block>
+        </column>
+      </div>
     </div>
   </Page>
 </template>
 
 <script>
-import DoubleColumnLayout from "../layouts/DoubleColumnLayout.vue";
-
 export default {
   name: "List-Massages",
-  components: { DoubleColumnLayout },
   data() {
     return {
       products: [
         {
           img: "/images/facial-1.svg",
+          gif: "/images/gif-1.gif",
           title: "MASAJE RELAJANTE",
           description:
-            "Favorece a la circulación, en deuce el estrés y mejora el estado de ánimo",
+            "Favorece a la circulación, en deuce el estrés y mejora el estado de ánimo.",
           cost: "$599",
           duration: "50 MIN",
         },
         {
-          img: "/images/facial-1.svg",
+          img: "/images/facial-2.svg",
+          gif: "/images/gif-2.gif",
           title: "MASAJE PIEDRAS CALIENTES",
           description:
             "Masaje Zen que favorece a mejorar la calidad del sueño, reducir dolores musculares.",
@@ -71,14 +57,16 @@ export default {
         },
         {
           img: "/images/facial-1.svg",
-          title: "MASAJE DEPORTIVO O DESCONTRACTURANTE",
+          gif: "/images/gif-1.gif",
+          title: "MASAJE DEPORTIVO",
           description:
             "Ayuda a mejorar el dolor en contracturas, disminuye el estrés y relaja los músculos.",
           cost: "$900",
           duration: "1 HORA",
         },
         {
-          img: "/images/facial-1.svg",
+          img: "/images/facial-2.svg",
+          gif: "/images/gif-2.gif",
           title: "MASAJE MODELADOR",
           description:
             "Se realiza drenaje linfático, compresas de lodo Del Mar muerto, cavitación y radiofrecuencia.",
@@ -94,33 +82,64 @@ export default {
 </script>
 
 <style>
-.image-facials-title {
-  max-width: fit-content !important;
-  width: 130%;
-}
-.description-facials-title {
-  padding: 60% 0% 10% 10%;
-  background-color: white;
-}
-#image {
-  grid-area: a;
-}
-#details {
-  grid-area: b;
-}
-.product {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  &.odd {
-    background-color: oldlace !important;
-    grid-template-areas: "a b";
-  }
-  &.even {
-    grid-template-areas: "b a";
-  }
-  .details-text {
-    padding-top: 12%;
+.massages {
+  background-color: #3a312e;
+  .products {
+    padding: 10px;
+    #image {
+      grid-area: a;
+    }
+    #details {
+      grid-area: b;
+      display: flex;
+      align-items: center;
+    }
+    .product {
+      height: 100%;
+      .details-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        .title {
+          font-size: 6vw;
+          color: white;
+        }
+        .description {
+          font-size: 3vw;
+          font-weight: 200;
+          color: white;
+        }
+        .details {
+          font-size: 1.8vw;
+          font-weight: 100;
+          color: white;
+        }
+      }
+      .imagen {
+        width: 100%;
+        &.default {
+          display: block;
+        }
+        &.demo {
+          display: none;
+        }
+      }
+
+      &.odd {
+        grid-template-areas: "a b";
+      }
+      &.even {
+        grid-template-areas: "b a";
+      }
+    }
+    .product:hover .default {
+      display: none;
+    }
+    .product:hover .demo {
+      display: block;
+    }
   }
 }
 </style>

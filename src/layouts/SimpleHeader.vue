@@ -1,5 +1,5 @@
 <template>
-  <header style="background: black">
+  <header class="header">
     <Columns mode="full" class="layout-header">
       <Block>
         <div class="default-layout__wrapper">
@@ -7,18 +7,22 @@
             <span
               class="default-layout__logo"
               @click="$router.push({ name: 'landing' })"
-              ><strong>HANNAH</strong> (spa)</span
+              >HANNAH</span
             >
             <ul class="default-layout__links default-layout__links-header">
               <li class="default-layout__link">
-                <router-link :to="{ name: 'landing' }">Servicios</router-link>
+                <router-link :to="{ name: 'massages-page' }"
+                  >Masajes</router-link
+                >
               </li>
               <li class="default-layout__link">
-                <router-link :to="{ name: 'contact' }">Contacto</router-link>
+                <router-link :to="{ name: 'facials-page' }"
+                  >Faciales</router-link
+                >
               </li>
               <li class="default-layout__link">
-                <router-link :to="{ name: 'learn' }"
-                  >Sobre nosotros</router-link
+                <router-link :to="{ name: 'special-services' }"
+                  >Servicios Especiales</router-link
                 >
               </li>
             </ul>
@@ -29,14 +33,6 @@
             <ul class="default-layout__links default-layout__links--menu">
               <li class="default-layout__buttom-link">
                 <router-link :to="{ name: 'landing' }">Inicio</router-link>
-              </li>
-              <li class="default-layout__buttom-link">
-                <router-link :to="{ name: 'contact' }">Contacto</router-link>
-              </li>
-              <li class="default-layout__buttom-link">
-                <router-link :to="{ name: 'learn' }"
-                  >Sobre nosotros</router-link
-                >
               </li>
             </ul>
           </nav>
@@ -69,6 +65,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.header {
+  background: black;
+  height: 4vw;
+}
 .default-layout {
   .layout-header {
     background: #12128b;
@@ -82,8 +82,8 @@ export default {
     display: none;
   }
   &__logo {
-    font-weight: 700;
-    font-size: 25px;
+    font-weight: 200;
+    font-size: 2vw;
     line-height: 27px;
     padding: 6.65px 24px;
     cursor: pointer;
@@ -91,16 +91,17 @@ export default {
   }
   &__links {
     display: inline-block;
-    margin-left: 32px;
+    margin-left: 2vw;
     margin-bottom: 0;
   }
   &__link {
     display: inline-block;
-    margin-right: 32px;
+    margin-right: 2vw;
     margin-bottom: 0;
     a {
       text-decoration: none;
       color: white;
+      font-size: 1vw;
       &:visited {
         color: white;
       }

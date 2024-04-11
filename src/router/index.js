@@ -12,37 +12,6 @@ const router = createRouter({
           name: "landing",
           component: () => import("../views/LandingPage.vue"),
         },
-      ],
-    },
-    {
-      path: "/views",
-      component: () => import("../layouts/BaseLayout.vue"),
-      children: [
-        {
-          path: "learn",
-          name: "learn",
-          component: () => import("../views/Learn.vue"),
-        },
-        {
-          path: "contact",
-          name: "contact",
-          component: () => import("../views/Contact.vue"),
-        },
-        {
-          path: "design",
-          nae: "design",
-          component: () => import("../views/Design.vue"),
-        },
-        {
-          path: "service",
-          name: "service",
-          component: () => import("../views/Service.vue"),
-        },
-        {
-          path: "extras",
-          name: "extras",
-          component: () => import("../views/Extras.vue"),
-        },
         {
           path: "facials",
           name: "facials-page",
@@ -54,19 +23,9 @@ const router = createRouter({
           component: () => import("../views/Massages.vue"),
         },
         {
-          path: "packages",
-          name: "packages-page",
-          component: () => import("../views/Packages.vue"),
-        },
-        {
-          path: "packages",
-          name: "packages-page",
-          component: () => import("../views/Packages.vue"),
-        },
-        {
-          path: "contact/laborContact",
-          name: "labor-contact",
-          component: () => import("../views/LaborContact.vue"),
+          path: "specialServices",
+          name: "special-services",
+          component: () => import("../views/SpecialServices.vue"),
         },
       ],
     },
