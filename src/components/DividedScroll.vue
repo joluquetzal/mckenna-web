@@ -10,7 +10,7 @@
             </div>
             <div>
               <p class="second-title">
-                crees necesitar algo que no tenenemos, preguntanos y dejate
+                crees necesitar algo que no tenenemos? preguntanos y dejate
                 sorprender
               </p>
             </div>
@@ -32,7 +32,7 @@
             <h2 class="section-title">Tienes una meta especifica?</h2>
             <p class="normal-text">
               Cuentanos sobre lo que buscas lograr y nosotros nos encargaremos
-              de hacer es camino menos largo.
+              de hacer el camino menos largo.
             </p>
           </div>
           <div class="section">
@@ -53,8 +53,8 @@
             </h2>
             <p class="normal-text">
               No todos tienen la obligacion de saber, si solo buscas relajarte,
-              nosotros te armaremos el paquete. Buscas algo mas, pero no conoces
-              mucho? nostros te guiaremos.
+              nosotros te armaremos el paquete. Buscas algo mas? pero no estas
+              seguro de que? nostros te guiaremos.
             </p>
           </div>
           <div class="section">

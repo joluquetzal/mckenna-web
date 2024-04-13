@@ -13,7 +13,6 @@
               <h2 class="title">{{ product.title }}</h2>
               <p class="description">{{ product.description }}</p>
               <div>
-                <p class="details">Incluye:</p>
                 <p class="details">{{ product.includes }}</p>
               </div>
             </div>
@@ -42,71 +41,43 @@ export default {
     return {
       products: [
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
-          title: "FACIAL HIDRATANTE",
-          description:
-            "Este tratamiento favorece a pieles de mixtas a secas. Mejora las líneas de expresión, rostro más humectado, disminuye la sensación acartonada en el rostro.",
-          includes:
-            "limpieza, exfoliación, ozono, mascarilla de elastina, aparatologia, ácido hialuronico, crema hidratante.",
-          cost: "$750",
+          img: "/images/specials/img1.svg",
+          gif: "/images/specials/video1.gif",
+          title: "SKIN BOOSTER",
+          description: "Hidratación con acido hialuronico",
+          includes: "4 sesiones 1 c/15 dias",
+          cost: "",
           recomendations: "",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
-          title: "ANTI ACNÉ O PIEL GRASA",
+          img: "/images/specials/img2.svg",
+          gif: "/images/specials/video2.gif",
+          title: "HILOS TENSORES",
           description:
-            "Este tratamiento ayuda a controlar el exceso de grasa, mejora el brillo en la cara, mejora es escozor y la apariencia de la piel.",
+            "Se pueden aplicar tanto para eliminar las arrugas y la flacidez facial, como para levantar las cejas o, incluso, para redefinir el óvalo de la cara y el contorno de la mandíbula.",
           includes:
-            "limpieza, exfoliación, extracción, aparatologia, alta frecuencia,mascarilla de arcilla o barro negro, hidratación.",
-          cost: "$1100",
-          recomendations:
-            "* Se sugiere seguir un tratamiento periodo según cada caso.",
-        },
-        {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
-          title: "HIDRODER MOABRASION",
-          description:
-            "Remueve las células muertas de la piel, el exceso de grasa e impurezas que obstruyen frecuentemente los poros a través de un sistema de succión indolora que hidrata y limpia de forma simultánea.",
-          includes:
-            "limpieza, exfoliación, alta frecuencia , hidrodermoabrasion con solución de vitamina C, ácido acetil salicílico, ácido glicolico o ácido hialuronico, mascarilla hidropastica e hidratación",
-          cost: "$1200",
+            "Frente, perfilamiento mandibular, Nasogeniano, Patas de gallo, Lineas marioneta, Cuello y/o Bolsas bichat.",
+          cost: "",
           recomendations: "",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
-          title: "FACIAL HANNAH",
+          img: "/images/specials/img3.svg",
+          gif: "/images/specials/video3.gif",
+          title: "NANO BOTOX",
           description:
-            "Este tratamiento es el más completo que tenemos y se realiza en 2 sesiones. El objetivo es mejorar la apariencia, extracción en caso necesario y un servicio de microdermoabrasion o hidrodermoabrasion.",
-          includes:
-            "Limpieza, exfoliación, aparatologia necesaria según tipo de piel, alta frecuencia, radiofrecuencia, mascarilla Gold, hidratación.",
-          cost: "$1400",
-          recomendations: "* 2 sesiones",
+            "El NanoBotox no utiliza toxina botulínica, sino que se basa en una combinación de sustancias activas como nano péptidos, vitaminas, aminoácidos y minerales que se aplican en la piel a través de estas microagujas.",
+          includes: "Una aplicación y un refuerzo.",
+          cost: "",
+          recomendations: "",
         },
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
-          title: "facial Rejuvenecedor",
+          img: "/images/specials/img4.svg",
+          gif: "/images/specials/video4.gif",
+          title: "MESO BOTOX",
           description:
-            "Rejuvenece la piel, favorece la producción de colágeno y es un buen tratamiento para mejorar la apariencia de la piel.",
-          includes:
-            "Inlimpieza, exfoliación, radiofrecuencia, bio estimulación, mascarilla según necesidad, máscara led Ayuda a disminuir las líneas de expresión, a mejorar la apariencia del rostro.",
-          cost: "$1000",
-          recomendations:
-            "* Es recomendable hacer de 8 a 10 sesiones periódicas.",
-        },
-        {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
-          title: "Microder moabrasión",
-          description:
-            "Se realiza para tener una piel más joven, suave y limpia. Con este procedimiento se consigue que la piel se renueve naturalmente, ayudando a eliminar cicatrices y a disminuir arrugas.",
-          includes:
-            "Incluye: limpieza, exfoliación, alta frecuencia , microdermoabrasion con puntas de diamante, mascarilla hidropastica e hidratación",
-          cost: "$1200",
+            "Consiste en la inyección de múltiples pequeñas dosis de Botox en la piel de la cara que puede servir para reducir la acción del sudor.",
+          includes: "Una aplicacion y un refuerzo",
+          cost: "",
           recomendations: "",
         },
       ],

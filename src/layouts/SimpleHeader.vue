@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header style="background: black">
     <Columns mode="full" class="layout-header">
       <Block>
         <div class="default-layout__wrapper">
@@ -65,10 +65,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header {
-  background: black;
-  height: 4vw;
-}
 .default-layout {
   .layout-header {
     background: #12128b;
@@ -83,7 +79,7 @@ export default {
   }
   &__logo {
     font-weight: 200;
-    font-size: 2vw;
+    font-size: 2rem;
     line-height: 27px;
     padding: 6.65px 24px;
     cursor: pointer;
@@ -91,17 +87,16 @@ export default {
   }
   &__links {
     display: inline-block;
-    margin-left: 2vw;
+    margin-left: 32px;
     margin-bottom: 0;
   }
   &__link {
     display: inline-block;
-    margin-right: 2vw;
+    margin-right: 32px;
     margin-bottom: 0;
     a {
       text-decoration: none;
       color: white;
-      font-size: 1vw;
       &:visited {
         color: white;
       }

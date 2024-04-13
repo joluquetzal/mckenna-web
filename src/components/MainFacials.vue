@@ -42,8 +42,8 @@ export default {
     return {
       products: [
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
+          img: "/images/facials/img1.svg",
+          gif: "/images/facials/video1.gif",
           title: "FACIAL HIDRATANTE",
           description:
             "Este tratamiento favorece a pieles de mixtas a secas. Mejora las líneas de expresión, rostro más humectado, disminuye la sensación acartonada en el rostro.",
@@ -53,8 +53,8 @@ export default {
           recomendations: "",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
+          img: "/images/facials/img2.svg",
+          gif: "/images/facials/video2.gif",
           title: "ANTI ACNÉ O PIEL GRASA",
           description:
             "Este tratamiento ayuda a controlar el exceso de grasa, mejora el brillo en la cara, mejora es escozor y la apariencia de la piel.",
@@ -65,8 +65,8 @@ export default {
             "* Se sugiere seguir un tratamiento periodo según cada caso.",
         },
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
+          img: "/images/facials/img3.svg",
+          gif: "/images/facials/video3.gif",
           title: "HIDRODER MOABRASION",
           description:
             "Remueve las células muertas de la piel, el exceso de grasa e impurezas que obstruyen frecuentemente los poros a través de un sistema de succión indolora que hidrata y limpia de forma simultánea.",
@@ -76,8 +76,8 @@ export default {
           recomendations: "",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
+          img: "/images/facials/img4.svg",
+          gif: "/images/facials/video4.gif",
           title: "FACIAL HANNAH",
           description:
             "Este tratamiento es el más completo que tenemos y se realiza en 2 sesiones. El objetivo es mejorar la apariencia, extracción en caso necesario y un servicio de microdermoabrasion o hidrodermoabrasion.",
@@ -87,8 +87,8 @@ export default {
           recomendations: "* 2 sesiones",
         },
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
+          img: "/images/facials/img5.svg",
+          gif: "/images/facials/video5.gif",
           title: "facial Rejuvenecedor",
           description:
             "Rejuvenece la piel, favorece la producción de colágeno y es un buen tratamiento para mejorar la apariencia de la piel.",
@@ -99,8 +99,8 @@ export default {
             "* Es recomendable hacer de 8 a 10 sesiones periódicas.",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
+          img: "/images/facials/img6.svg",
+          gif: "/images/facials/video6.gif",
           title: "Microder moabrasión",
           description:
             "Se realiza para tener una piel más joven, suave y limpia. Con este procedimiento se consigue que la piel se renueve naturalmente, ayudando a eliminar cicatrices y a disminuir arrugas.",

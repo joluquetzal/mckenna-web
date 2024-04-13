@@ -1,7 +1,7 @@
 <template>
   <div class="base-layout facials">
     <div class="main-logo">
-      <img src="../assets/main.svg" alt="" />
+      <img src="../assets/main.svg" alt="" @load="imageLoaded = true"/>
       <simple-header></simple-header>
       <div>
         <div class="box">
@@ -31,22 +31,36 @@
       </div>
     </div>
     <main>
-      <router-view />
+      <router-view v-if="imageLoaded" />
     </main>
     <simple-footer></simple-footer>
   </div>
 </template>
 
 <script>
+import { getCurrentInstance, onMounted } from "vue";
 import SimpleFooter from "./SimpleFooter.vue";
 import SimpleHeader from "./SimpleHeader.vue";
 
 export default {
+  name: "Base-Layout",
   components: { SimpleHeader, SimpleFooter },
+  data() {
+    return {
+      loaded: false,
+      imageLoaded: false,
+    };
+  },
   methods: {
     currentRoute(path) {
       return this.$route.path.includes(path);
     },
+  },
+  setup() {
+    onMounted(() => {
+      console.log(getCurrentInstance().data.imageLoaded);
+      getCurrentInstance().data.loaded = true;
+    });
   },
 };
 </script>

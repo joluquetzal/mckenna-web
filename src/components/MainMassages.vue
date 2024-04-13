@@ -38,8 +38,8 @@ export default {
     return {
       products: [
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
+          img: "/images/massages/img1.svg",
+          gif: "/images/massages/video1.gif",
           title: "MASAJE RELAJANTE",
           description:
             "Favorece a la circulación, en deuce el estrés y mejora el estado de ánimo.",
@@ -47,8 +47,8 @@ export default {
           duration: "50 MIN",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
+          img: "/images/massages/img2.svg",
+          gif: "/images/massages/video2.gif",
           title: "MASAJE PIEDRAS CALIENTES",
           description:
             "Masaje Zen que favorece a mejorar la calidad del sueño, reducir dolores musculares.",
@@ -56,8 +56,8 @@ export default {
           duration: "75 Min",
         },
         {
-          img: "/images/facial-1.svg",
-          gif: "/images/gif-1.gif",
+          img: "/images/massages/img3.svg",
+          gif: "/images/massages/video3.gif",
           title: "MASAJE DEPORTIVO",
           description:
             "Ayuda a mejorar el dolor en contracturas, disminuye el estrés y relaja los músculos.",
@@ -65,8 +65,8 @@ export default {
           duration: "1 HORA",
         },
         {
-          img: "/images/facial-2.svg",
-          gif: "/images/gif-2.gif",
+          img: "/images/massages/img4.svg",
+          gif: "/images/massages/video4.gif",
           title: "MASAJE MODELADOR",
           description:
             "Se realiza drenaje linfático, compresas de lodo Del Mar muerto, cavitación y radiofrecuencia.",

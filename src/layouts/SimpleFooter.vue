@@ -1,19 +1,60 @@
 <template>
   <footer class="footer">
-    <Columns number="2" number-m="2" number-s="1">
+    <div>
+      <img src="../assets/icons/hanna-icon.svg" alt="" />
+    </div>
+    <Columns number="4" number-m="2" number-s="1">
+      <Block></Block>
+      <Block>
+        <span
+          class="default-layout__logo"
+          @click="$router.push({ name: 'landing' })"
+          >HANNAH</span
+        >
+      </Block>
       <Block>
         <nav class="default-layout__nav">
           <ul class="default-layout__links default-layout__links--footer">
             <li class="default-layout__buttom-link">
-              <a href="mailto:mckennacorp@me.com?Subject=Dudas%20generales"
-                >Dudas</a
+              <router-link :to="{ name: 'massages-page' }">Masajes</router-link>
+            </li>
+            <li class="default-layout__buttom-link">
+              <router-link :to="{ name: 'facials-page' }">Faciales</router-link>
+            </li>
+            <li class="default-layout__buttom-link">
+              <router-link :to="{ name: 'special-services' }"
+                >Servicios Especiales</router-link
               >
             </li>
             <li class="default-layout__buttom-link">
               <a
                 href="mailto:mckennacorp@me.com?Subject=Interesado%20en%20las%20plazas%20laborales"
-                >Trabaja con nosotros</a
+                >Contactanos</a
               >
+            </li>
+            <li class="default-layout__buttom-link">
+              <router-link :to="{ name: 'special-services' }"
+                >Aviso Legal</router-link
+              >
+            </li>
+          </ul>
+        </nav>
+      </Block>
+      <Block>
+        <nav>
+          <ul class="social-media">
+            <li>
+              <a href=""
+                ><img src="../assets/icons/instagram-icon.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="../assets/icons/facebook-icon.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a href=""><img src="../assets/icons/mail-icon.svg" alt="" /></a>
             </li>
           </ul>
         </nav>
@@ -47,17 +88,14 @@ export default {
 <style lang="scss" scoped>
 .footer {
   background-color: #000000;
-  height: 20vw;
+  height: 27vw;
+}
+img {
+  display: block;
+  position: absolute;
+  z-index: 1;
 }
 .default-layout {
-  .layout-header {
-    background: #12128b;
-  }
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   &__menu-icon {
     display: none;
   }
@@ -70,14 +108,12 @@ export default {
     color: white;
   }
   &__links {
-    display: inline-block;
-    margin-left: 32px;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
   }
   &__link {
     display: inline-block;
-    margin-right: 32px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     a {
       text-decoration: none;
       color: white;
@@ -88,32 +124,12 @@ export default {
   }
   &__buttom-link {
     display: inline-block;
-    margin-right: 32px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     a {
       text-decoration: none;
       color: white;
       &:visited {
         color: white;
-      }
-    }
-  }
-  .btn {
-    &--secondary {
-      cursor: pointer;
-      border: 1px solid #000000;
-      color: black;
-      background-color: transparent;
-      margin-bottom: 0;
-      img {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 8px;
-      }
-      span {
-        font-weight: 500;
-        display: inline-block;
-        vertical-align: middle;
       }
     }
   }
@@ -193,5 +209,9 @@ export default {
       z-index: 1;
     }
   }
+}
+.social-media {
+  display: flex;
+  justify-content: space-around;
 }
 </style>
