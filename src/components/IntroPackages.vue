@@ -12,6 +12,14 @@
   </Page>
 </template>
 
+<script>
+import SingleColumnLayout from "../layouts/SingleColumnLayout.vue";
+export default {
+  name: "Introduction-Packages",
+  components: { SingleColumnLayout },
+};
+</script>
+
 <style>
 @import url("../assets/fonts/Boska_Complete/Fonts/WEB/css/boska.css");
 @import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");

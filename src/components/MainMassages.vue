@@ -1,32 +1,34 @@
 <template>
   <Page class="massages">
     <div class="products">
-      <div v-for="(product, index) in products" :key="index">
-        <column
-          number="2"
-          mode="full"
-          class="product"
-          :class="(index + 1) % 2 === 1 ? 'odd' : 'even'"
-        >
-          <block id="details">
-            <div class="details-text">
-              <h2 class="title">{{ product.title }}</h2>
-              <p class="description">{{ product.description }}</p>
-              <p class="details">{{ product.duration }}</p>
-            </div>
-          </block>
-          <block>
-            <div class="image-wrapper" id="image">
-              <img
-                class="imagen default"
-                :src="`${product.img}`"
-                :alt="index"
-              />
-              <img class="imagen demo" :src="`${product.gif}`" :alt="index" />
-            </div>
-          </block>
-        </column>
-      </div>
+      <block style="background-color: #120f0f; border-radius: 1%">
+        <div v-for="(product, index) in products" :key="index">
+          <column
+            number="2"
+            mode="full"
+            class="product"
+            :class="(index + 1) % 2 === 1 ? 'odd' : 'even'"
+          >
+            <block id="details">
+              <div class="details-text">
+                <h2 class="title">{{ product.title }}</h2>
+                <p class="description">{{ product.description }}</p>
+                <p class="details">{{ product.duration }}</p>
+              </div>
+            </block>
+            <block>
+              <div class="image-wrapper" id="image">
+                <img
+                  class="imagen default"
+                  :src="`${product.img}`"
+                  :alt="index"
+                />
+                <img class="imagen demo" :src="`${product.gif}`" :alt="index" />
+              </div>
+            </block>
+          </column>
+        </div>
+      </block>
     </div>
   </Page>
 </template>
@@ -83,7 +85,7 @@ export default {
 
 <style>
 .massages {
-  background-color: #3a312e;
+  background-color: rgb(44, 16, 16);
   .products {
     padding: 10px;
     #image {

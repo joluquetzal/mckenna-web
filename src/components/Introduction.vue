@@ -47,9 +47,10 @@
 
 <script>
 import DoubleColumnLayout from "../layouts/DoubleColumnLayout.vue";
+import SingleColumnLayout from "../layouts/SingleColumnLayout.vue";
 export default {
   name: "Introduction-Section",
-  components: { DoubleColumnLayout },
+  components: { DoubleColumnLayout, SingleColumnLayout },
 };
 </script>
 

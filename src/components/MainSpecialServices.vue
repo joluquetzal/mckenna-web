@@ -1,34 +1,36 @@
 <template>
-  <Page class="facials">
+  <Page class="specials">
     <div class="products">
-      <div v-for="(product, index) in products" :key="index">
-        <column
-          number="2"
-          mode="full"
-          class="product"
-          :class="(index + 1) % 2 === 1 ? 'odd' : 'even'"
-        >
-          <block id="details">
-            <div class="details-text">
-              <h2 class="title">{{ product.title }}</h2>
-              <p class="description">{{ product.description }}</p>
-              <div>
-                <p class="details">{{ product.includes }}</p>
+      <block style="background-color: #120f0f; border-radius: 1%">
+        <div v-for="(product, index) in products" :key="index">
+          <column
+            number="2"
+            mode="full"
+            class="product"
+            :class="(index + 1) % 2 === 1 ? 'odd' : 'even'"
+          >
+            <block id="details">
+              <div class="details-text">
+                <h2 class="title">{{ product.title }}</h2>
+                <p class="description">{{ product.description }}</p>
+                <div>
+                  <p class="details">{{ product.includes }}</p>
+                </div>
               </div>
-            </div>
-          </block>
-          <block>
-            <div id="image">
-              <img
-                class="imagen default"
-                :src="`${product.img}`"
-                :alt="index"
-              />
-              <img class="imagen demo" :src="`${product.gif}`" :alt="index" />
-            </div>
-          </block>
-        </column>
-      </div>
+            </block>
+            <block>
+              <div id="image">
+                <img
+                  class="imagen default"
+                  :src="`${product.img}`"
+                  :alt="index"
+                />
+                <img class="imagen demo" :src="`${product.gif}`" :alt="index" />
+              </div>
+            </block>
+          </column>
+        </div>
+      </block>
     </div>
   </Page>
 </template>
@@ -87,8 +89,8 @@ export default {
 </script>
 
 <style>
-.facials {
-  background-color: #3a312e;
+.specials {
+  background-color: rgb(44, 16, 16);
   .products {
     padding: 10px;
     #image {
@@ -102,7 +104,6 @@ export default {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr;
       height: 100%;
-
       .details-text {
         display: flex;
         flex-direction: column;

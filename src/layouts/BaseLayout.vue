@@ -1,53 +1,42 @@
 <template>
   <div class="base-layout facials">
+    <h1 class="counter">0</h1>
+    <div class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <div class="main-logo">
-      <img src="../assets/main.svg" alt="" @load="imageLoaded = true"/>
-      <simple-header></simple-header>
-      <div>
-        <div class="box">
-          <p class="letter first">H</p>
-          <p class="letter-hov first">H</p>
-        </div>
-        <div class="box">
-          <p class="letter second">A</p>
-          <p class="letter-hov second">A</p>
-        </div>
-        <div class="box">
-          <p class="letter third">N</p>
-          <p class="letter-hov third">N</p>
-        </div>
-        <div class="box">
-          <p class="letter fourth">N</p>
-          <p class="letter-hov forth">N</p>
-        </div>
-        <div class="box">
-          <p class="letter fifth">A</p>
-          <p class="letter-hov fifth">A</p>
-        </div>
-        <div class="box">
-          <p class="letter sixth">H</p>
-          <p class="letter-hov sixth">H</p>
-        </div>
-      </div>
+      <img src="../assets/main.svg" alt="" @load="imageLoaded = true" />
+      <simple-header class="header"></simple-header>
+      <titles-component></titles-component>
     </div>
     <main>
-      <router-view v-if="imageLoaded" />
+      <router-view style="background-color: black" v-if="imageLoaded" />
     </main>
     <simple-footer></simple-footer>
   </div>
 </template>
 
 <script>
-import { getCurrentInstance, onMounted } from "vue";
+import gsap from "gsap";
+import { onMounted } from "vue";
 import SimpleFooter from "./SimpleFooter.vue";
 import SimpleHeader from "./SimpleHeader.vue";
+import TitlesComponent from "./Titles.vue";
 
 export default {
   name: "Base-Layout",
-  components: { SimpleHeader, SimpleFooter },
+  components: { SimpleHeader, SimpleFooter, TitlesComponent },
   data() {
     return {
-      loaded: false,
       imageLoaded: false,
     };
   },
@@ -58,8 +47,56 @@ export default {
   },
   setup() {
     onMounted(() => {
-      console.log(getCurrentInstance().data.imageLoaded);
-      getCurrentInstance().data.loaded = true;
+      function startLoader() {
+        let currentValue = 0;
+        let counterElement = document.querySelector(".counter");
+        function updateCounter() {
+          if (currentValue === 100) {
+            return;
+          }
+
+          currentValue += Math.floor(Math.random() * 10) + 1;
+          if (currentValue > 100) {
+            currentValue = 100;
+          }
+
+          counterElement.textContent = currentValue;
+
+          let delay = Math.floor(Math.random() * 200) + 50;
+          setTimeout(updateCounter, delay);
+        }
+
+        updateCounter();
+      }
+
+      startLoader();
+      gsap.to(".counter", {
+        duration: 0.25,
+        delay: 3.5,
+        opacity: 0,
+        zIndex: 0,
+      });
+      gsap.to(".counter", {
+        duration: 0.25,
+        delay: 4.5,
+        zIndex: 0,
+      });
+      gsap.to(".overlay", {
+        duration: 0.25,
+        delay: 4.5,
+        zIndex: 0,
+      });
+
+      gsap.to(".bar", {
+        duration: 1.5,
+        delay: 3.5,
+        height: 0,
+        stagger: {
+          amount: 0.5,
+        },
+        ease: "power4.inOut",
+      });
+
     });
   },
 };
@@ -67,85 +104,36 @@ export default {
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
-.main-logo {
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
   display: flex;
-  width: auto;
-  flex-direction: column;
-  justify-content: flex-end;
-  img {
-    display: block;
-    width: 100%;
-  }
-  .letter {
-    font-family: "Major Mono Display", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    font-size: 20vw;
-    display: block;
-    position: absolute;
-    top: 26vw;
-    z-index: 1;
-    &.first {
-      left: 1.5vw;
-    }
-    &.second {
-      left: 14.5vw;
-    }
-    &.third {
-      left: 27.5vw;
-    }
-    &.fourth {
-      left: 40.5vw;
-    }
-    &.fifth {
-      left: 53.5vw;
-    }
-    &.sixth {
-      left: 66.5vw;
-    }
-  }
-  .letter-hov {
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    font-size: 20vw;
-    opacity: 0;
-    display: block;
-    position: absolute;
-    top: 26.9vw;
-    z-index: 0;
-    &.first {
-      left: 1.5vw;
-    }
-    &.second {
-      left: 15.5vw;
-    }
-    &.third {
-      left: 27.5vw;
-    }
-    &.forth {
-      left: 40.5vw;
-    }
-    &.fifth {
-      left: 54.5vw;
-    }
-    &.sixth {
-      left: 66.5vw;
-    }
-  }
-  .box:hover .letter {
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .box:hover .letter-hov {
-    opacity: 1;
-    transition: all 0.5s ease;
-  }
-  &.facials {
-    background-color: #a18767;
-    mix-blend-mode: hard-light;
-  }
+  overflow: hidden;
+}
+.bar {
+  width: 10vw;
+  height: 105vh;
+  background: #1a1a1a;
+}
+.counter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  z-index: 10;
+  color: #bcbcc4;
+  padding: 0.2em 0.4em;
+  font-size: 16vw;
+  font-family: "Major Mono Display", monospace;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 .base-layout {

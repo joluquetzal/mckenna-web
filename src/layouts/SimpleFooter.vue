@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div>
+    <div class="container">
       <img src="../assets/icons/hanna-icon.svg" alt="" />
     </div>
     <Columns number="4" number-m="2" number-s="1">
@@ -28,7 +28,7 @@
             </li>
             <li class="default-layout__buttom-link">
               <a
-                href="mailto:mckennacorp@me.com?Subject=Interesado%20en%20las%20plazas%20laborales"
+                href="mailto:hannah.spa19@gmail.com?Subject=Interes%20general%20en%20productos"
                 >Contactanos</a
               >
             </li>
@@ -44,17 +44,23 @@
         <nav>
           <ul class="social-media">
             <li>
-              <a href=""
-                ><img src="../assets/icons/instagram-icon.svg" alt=""
+              <a
+                href="https://www.instagram.com/hannah.spa.cdmx?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              >
+                <img src="../assets/icons/instagram-icon.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href=""
+              <a
+                href="https://www.facebook.com/people/Hannah-Spa/61553359328074/"
                 ><img src="../assets/icons/facebook-icon.svg" alt=""
               /></a>
             </li>
             <li>
-              <a href=""><img src="../assets/icons/mail-icon.svg" alt="" /></a>
+              <a
+                href="mailto:hannah.spa19@gmail.com?Subject=Interes%20general%20en%20productos"
+                ><img src="../assets/icons/mail-icon.svg" alt=""
+              /></a>
             </li>
           </ul>
         </nav>
@@ -90,10 +96,11 @@ export default {
   background-color: #000000;
   height: 27vw;
 }
-img {
-  display: block;
+.container {
+  display: flex;
   position: absolute;
   z-index: 1;
+  height: 27vw;
 }
 .default-layout {
   &__menu-icon {
@@ -142,72 +149,6 @@ img {
   }
   &__menu {
     display: none;
-  }
-  @include respond-to("medium and down") {
-    &__logo {
-      display: block;
-      text-align: center;
-    }
-    &__logo-wrapper {
-      order: 1;
-    }
-    &__menu-icon {
-      display: inline-block;
-    }
-    &__links {
-      &--header {
-        display: none;
-      }
-      &--footer {
-        margin-left: 0;
-        display: block;
-      }
-      &--menu {
-        margin-left: 0;
-        display: block;
-        text-align: left;
-      }
-    }
-    &__link {
-      display: block;
-      margin-right: 0;
-      margin-bottom: 32px;
-    }
-    .btn {
-      &--secondary {
-        display: none;
-      }
-    }
-    &__wrapper {
-      justify-content: unset;
-      nav {
-        margin: auto;
-      }
-    }
-    .image-wrapper {
-      .img {
-        height: 100px;
-        margin: auto;
-      }
-    }
-    &__nav {
-      text-align: center;
-      width: unset;
-    }
-    &__footer {
-      padding: calc(var(--f-gutter) + 5.87px) 0;
-    }
-    &__menu {
-      display: block;
-      padding: calc(var(--f-gutter-l) + 6.111px);
-      position: fixed;
-      width: 100vw;
-      height: calc(100vh - 72px);
-      top: 72px;
-      left: 0;
-      background-color: white;
-      z-index: 1;
-    }
   }
 }
 .social-media {

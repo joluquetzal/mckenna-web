@@ -1,8 +1,6 @@
 <template>
   <div>
-    <block>
-      <special-services />
-    </block>
+    <special-services />
   </div>
 </template>
 

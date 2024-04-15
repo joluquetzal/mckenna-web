@@ -64,11 +64,13 @@
 </template>
 
 <script>
+import SingleColumnLayout from "../layouts/SingleColumnLayout.vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted, onUnmounted, ref } from "vue";
 export default {
   name: "List-Packages",
+  components: { SingleColumnLayout },
   data() {
     return {
       color: "red",
